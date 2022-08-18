@@ -17,9 +17,9 @@ JavaScript:
 (x) Focar na implementação dos dados e só depois
    na implementação da interface
 
-() Criar função createBoard e utilizar em start
-() Criar função newGame e utilizar em start
-() Criar função render e utilizar em newGame
+(x) Criar função createBoard e utilizar em start
+(x) Criar função newGame e utilizar em start
+(x) Criar função render e utilizar em newGame
 
 () Criar função renderBoard e utilizar em render
 () Criar função renderButtons e utilizar em render

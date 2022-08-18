@@ -2,6 +2,7 @@ var state = {board: [], currentGame: [], savedGames: [] };
 
 function start() {
   createBoard()
+  newGame();
 
   console.log(state.board)
 }
@@ -12,6 +13,33 @@ function createBoard() {
   for(var i = 1; i <= 60; i++) {
     state.board.push(i);
   }
+}
+
+function newGame() {
+  resetGame();
+  render();
+}
+
+function render() {
+  renderBoard();
+}
+
+function renderBoard() {
+  var divBoards = document.querySelector('#megasena-boards');
+  divBoards.innerHTML = '';
+
+  var ulNumbers =  document.createElement('ul');
+
+  for(var i = 0; i < state.board.length; i++) {
+    var currentNumber = state.board[i];
+
+    var liNumbers = document.createElement('li');
+    liNumbers.textContent =  currentNumber;
+
+    ulNumbers.appendChild(liNumbers);
+  }
+
+  divBoards.appendChild(ulNumbers);
 }
 
 function addNumberToGame(numberToAdd) {
