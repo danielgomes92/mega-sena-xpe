@@ -1,20 +1,17 @@
 var state = {board: [], currentGame: [], savedGames: [] };
 
 function start() {
-  addNumberToGame(1);
-  addNumberToGame(2);
-  addNumberToGame(3);
-  addNumberToGame(4);
-  saveGame();
-  addNumberToGame(5);
-  addNumberToGame(35);
-  saveGame();
-  saveGame();
+  createBoard()
 
+  console.log(state.board)
+}
 
-  console.log(state.currentGame);
-  console.log(state.savedGames);
-   
+function createBoard() {
+  state.board = []
+
+  for(var i = 1; i <= 60; i++) {
+    state.board.push(i);
+  }
 }
 
 function addNumberToGame(numberToAdd) {
@@ -79,6 +76,10 @@ function saveGame() {
 
 function isGameComplete() {
   return state.currentGame.length === 6;
+}
+
+function resetGame() {
+  state.currentGame = []
 }
 
 start();
