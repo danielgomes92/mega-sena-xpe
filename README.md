@@ -7,14 +7,14 @@ Roteiro - megasena-v1
 () Clonar projeto-base
 
 HTML: 
-() Criar título
-() Criar 3 div's com id's "megasena-numbers", "megasena-buttons", "megasena-saved-games"
+(x) Criar título
+(x) Criar 3 div's com id's "megasena-numbers", "megasena-buttons", "megasena-saved-games"
 
 JavaScript:
-() Criar estado da aplicação com objeto { board: [], currentGame: [], savedGames: [] }
-() Criar e invocar função start
+(x) Criar estado da aplicação com objeto { board: [], currentGame: [], savedGames: [] }
+(x) Criar e invocar função start
 
-() Focar na implementação dos dados e só depois
+(x) Focar na implementação dos dados e só depois
    na implementação da interface
 
 () Criar função createBoard e utilizar em start
