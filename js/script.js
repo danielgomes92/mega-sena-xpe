@@ -7,6 +7,8 @@ function start() {
   addNumberToGame(4);
   addNumberToGame(5);
   addNumberToGame(5);
+  removeNumberFromGame(5);
+  removeNumberFromGame(2);
 
   console.log(state.currentGame);
    
@@ -30,6 +32,23 @@ function addNumberToGame(numberToAdd) {
 
   state.currentGame.push(numberToAdd);
 }
+
+function removeNumberFromGame(numberToRemove) {
+  var newGame = []
+
+  for (var i = 0; i < state.currentGame.length; i++) {
+    var currentNumber = state.currentGame[i]
+
+    if (currentNumber === numberToRemove) {
+      continue;
+    }
+
+    newGame.push(currentNumber);
+  }
+
+  state.currentGame =  newGame;
+}
+
 
 function isNumberInGame(numberToCheck) {
   // if (state.currentGame.includes(numberToCheck)) {
