@@ -6,12 +6,7 @@ function start() {
   addNumberToGame(3);
   addNumberToGame(4);
   addNumberToGame(5);
-  addNumberToGame(60);
-  addNumberToGame(59);
-  addNumberToGame(59);
-  addNumberToGame(59);
-  addNumberToGame(59);
-  addNumberToGame(62);
+  addNumberToGame(5);
 
   console.log(state.currentGame);
    
@@ -28,7 +23,23 @@ function addNumberToGame(numberToAdd) {
     return
   }
 
+  if (isNumberInGame(numberToAdd)) {
+    console.error('Este número já está no jogo.', numberToAdd);
+    return;
+  }
+
   state.currentGame.push(numberToAdd);
+}
+
+function isNumberInGame(numberToCheck) {
+  // if (state.currentGame.includes(numberToCheck)) {
+  //   return true;
+  // }
+
+  // return false;
+
+  return state.currentGame.includes(numberToCheck);
+
 }
 
 start();
