@@ -7,7 +7,7 @@ function start() {
   addNumberToGame(4);
   addNumberToGame(5);
   addNumberToGame(5);
-  removeNumberFromGame(5);
+  removeNumberFromGame(62);
   removeNumberFromGame(2);
 
   console.log(state.currentGame);
@@ -34,6 +34,10 @@ function addNumberToGame(numberToAdd) {
 }
 
 function removeNumberFromGame(numberToRemove) {
+  if (numberToRemove < 1 || numberToRemove > 60) {
+    console.error('Número inválido', numberToRemove);
+    return;
+  }
   var newGame = []
 
   for (var i = 0; i < state.currentGame.length; i++) {
