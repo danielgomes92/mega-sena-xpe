@@ -42,6 +42,6 @@ JavaScript: <br>
 (x) Criar função renderSaveGameButton() e utilizar em renderButtons <br>
 
 CSS: <br>
-() Estilizar livremente
+(x) Estilizar livremente
 
-() Implementar suporte ao LocalStorage
+(x) Implementar suporte ao LocalStorage
