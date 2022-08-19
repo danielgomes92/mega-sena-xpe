@@ -17,19 +17,18 @@ JavaScript: <br>
 (x) Focar na implementação dos dados e só depois
    na implementação da interface  <br>
 
-<<<<<<< HEAD
-(x) Criar função createBoard e utilizar em start
-(x) Criar função newGame e utilizar em start
-(x) Criar função render e utilizar em newGame
+(x) Criar função createBoard e utilizar em start  <br>
+(x) Criar função newGame e utilizar em start  <br>
+(x) Criar função render e utilizar em newGame  <br>
 
-(x) Criar função renderBoard e utilizar em render
-(x) Criar função renderButtons e utilizar em render
-(x) Criar função renderSavedGames e utilizar em render
+(x) Criar função renderBoard e utilizar em render  <br>
+(x) Criar função renderButtons e utilizar em render  <br>
+(x) Criar função renderSavedGames e utilizar em render  <br>
 
-(x) Criar função renderNewGameButton() e utilizar em renderButtons
-(x) Criar função renderRandomGameButton() e utilizar em renderButtons
-(x) Criar função renderSaveGameButton() e utilizar em renderButtons
-=======
+(x) Criar função renderNewGameButton() e utilizar em renderButtons  <br>
+(x) Criar função renderRandomGameButton() e utilizar em renderButtons  <br>
+(x) Criar função renderSaveGameButton() e utilizar em renderButtons  <br>
+
 (x) Criar função createBoard e utilizar em start <br>
 (x) Criar função newGame e utilizar em start <br>
 (x) Criar função render e utilizar em newGame <br>
