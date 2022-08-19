@@ -21,13 +21,13 @@ JavaScript:
 (x) Criar função newGame e utilizar em start
 (x) Criar função render e utilizar em newGame
 
-() Criar função renderBoard e utilizar em render
-() Criar função renderButtons e utilizar em render
-() Criar função renderSavedGames e utilizar em render
+(x) Criar função renderBoard e utilizar em render
+(x) Criar função renderButtons e utilizar em render
+(x) Criar função renderSavedGames e utilizar em render
 
-() Criar função renderNewGameButton() e utilizar em renderButtons
-() Criar função renderRandomGameButton() e utilizar em renderButtons
-() Criar função renderSaveGameButton() e utilizar em renderButtons
+(x) Criar função renderNewGameButton() e utilizar em renderButtons
+(x) Criar função renderRandomGameButton() e utilizar em renderButtons
+(x) Criar função renderSaveGameButton() e utilizar em renderButtons
 
 CSS:
 () Estilizar livremente

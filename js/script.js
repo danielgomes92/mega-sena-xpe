@@ -4,7 +4,6 @@ function start() {
   createBoard()
   newGame();
 
-  console.log(state.board)
 }
 
 function createBoard() {
@@ -18,10 +17,13 @@ function createBoard() {
 function newGame() {
   resetGame();
   render();
+  console.log(state.currentGame);
 }
 
 function render() {
   renderBoard();
+  renderButtons();
+  renderSavedGames();
 }
 
 function renderBoard() {
@@ -36,10 +38,67 @@ function renderBoard() {
     var liNumbers = document.createElement('li');
     liNumbers.textContent =  currentNumber;
 
+    liNumbers.addEventListener('click', handleNumberClick);
+
     ulNumbers.appendChild(liNumbers);
   }
 
   divBoards.appendChild(ulNumbers);
+}
+// função que adiciona e remove numeros adicionados.
+function handleNumberClick(event) {
+  var value = Number(event.currentTarget.textContent);
+
+  if (isNumberInGame(value)) {
+    removeNumberFromGame(value);
+  } else {
+    addNumberToGame(value);
+  }
+  console.log(state.currentGame);
+}
+
+function renderButtons() {
+  var divButtons = document.querySelector('#megasena-buttons');
+  divButtons.innerHTML = '';
+  
+  var buttonNewGame = createNewGameButton();
+  var buttonRandomGame = createRandomGameButton();
+  var buttonSaveGame = createSaveGameButton();
+
+  divButtons.appendChild(buttonNewGame);
+  divButtons.appendChild(buttonRandomGame);
+  divButtons.appendChild(buttonSaveGame);
+}
+
+function createRandomGameButton() {
+  var button = document.createElement('button');
+  button.textContent = 'Jogo Aleatório';
+
+  button.addEventListener('click', randomGame);
+
+  return button
+}
+
+function createNewGameButton() {
+  var button = document.createElement('button');
+  button.textContent = 'Novo jogo';
+
+  button.addEventListener('click', newGame);
+
+  return button;
+}
+
+function createSaveGameButton() {
+  var button = document.createElement('button');
+  button.textContent = 'Salvar Jogo';
+
+  button.addEventListener('click', saveGame);
+
+  return button;
+}
+
+function renderSavedGames() {
+
 }
 
 function addNumberToGame(numberToAdd) {
@@ -100,6 +159,9 @@ function saveGame() {
   }
 
   state.savedGames.push(state.currentGame)
+  newGame();
+
+  console.log(state.savedGames);
 }
 
 function isGameComplete() {
@@ -108,6 +170,17 @@ function isGameComplete() {
 
 function resetGame() {
   state.currentGame = []
+}
+
+function randomGame() {
+  resetGame();
+
+  while (!isGameComplete()) {
+    var randomNumber = Math.ceil(Math.random() * 60);
+    addNumberToGame(randomNumber);
+  }
+
+  console.log(state.currentGame);
 }
 
 start();
