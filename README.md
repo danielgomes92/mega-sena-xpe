@@ -43,3 +43,5 @@ JavaScript: <br>
 
 CSS: <br>
 () Estilizar livremente
+
+() Implementar suporte ao LocalStorage
