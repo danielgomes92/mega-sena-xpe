@@ -1,6 +1,7 @@
 var state = {board: [], currentGame: [], savedGames: [] };
 
 function start() {
+  readLocalStorage();
   createBoard()
   newGame();
 }
@@ -205,7 +206,7 @@ function saveGame() {
   state.savedGames.push(state.currentGame)
   writeToLocalStorage();
   newGame();
-  
+
   // console.log(state.savedGames);
 }
 
